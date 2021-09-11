@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-form{
+    padding: 25px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-title{
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #32CF98;
+}
+
+.label-text{
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #161616;
+    padding-left: 1px;
+}
+
+.text{
+    border: 1px solid rgba(22, 22, 22, 0.5);
+    width: 100%;
+    padding: 16px;
+    height: 47px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.text.password{
+    width: 300px;
+}
+
+.text:focus{
+    border: 1px solid rgb(22, 22, 22);
+    transition-duration: 250ms;
+}
+
+.text::placeholder{
+    color: rgba(66, 66, 66, 0.4);
+    font-size: 14px;
+}
+
+.password-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.box.first{
+    margin-bottom: 40px;
+}
+
+.box.second{
+    margin-bottom: 25px;
+}
+
+.hide{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.hide:hover{
+    width: 35px;
+    height: 35px;
+    transition-duration: 250ms;
+}
+
+.active{
+    opacity: 0.5;
+}
+
+.register-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.check{
+    margin-right: 8px;
+    border-radius: 9px;
+}
+
+.accept-text{
+    font-size: 14px;
+    color: #161616;
+}
+
+.register{
+    height: 47px;
+    width: 100%;
+    background-color: #21ac7b;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.register:hover{
+    animation-name: buttonColor;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes buttonColor {
+        33%{
+            background: rgba(33, 172, 123, 0.25)
+        }
+
+        66%{
+            background: rgba(33, 172, 123, 0.50);
+        }
+
+        100%{
+            background: rgba(33, 172, 123, 0.75);
+        }
+}

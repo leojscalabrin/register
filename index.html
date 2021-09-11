@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Faça seu Cadastro</title>
+</head>
+
+<body>
+    <section class="container">
+        <form class="register-form">
+            <h1 class="register-title">Faça seu Cadastro</h1>
+            <div class="box first">
+                <label for="name" class="label-text">nome completo</label>
+                <input type="text" class="text" id="name" placeholder="Digite seu nome completo">
+            </div>
+
+            <div class="box first">
+                <label for="email" class="label-text">digite seu e-mail</label>
+                <input type="text" class="text" id="email" placeholder="Digite seu E-mail">
+            </div>
+
+            <div class="password-wrapper">
+                <div class="box second">
+                    <label for="password" class="label-text">senha</label>
+                    <input type="password" class="text password" id="password1" placeholder="Crie uma senha">
+                </div>
+                <img class="hide hide1" src="/icons/hide.png" alt="Esconder/Mostrar senha">
+            </div>
+
+            <div class="password-wrapper">
+                <div class="box second">
+                    <label for="password" class="label-text">confirmar Senha</label>
+                    <input type="password" class="text password" id="password2" placeholder="Crie uma senha">
+                </div>
+                <img class="hide hide2" src="/icons/hide.png" alt="Esconder/Mostrar senha">
+            </div>
+
+            <div class="register-container">
+                <input type="checkbox" class="check" required>
+                <span class="accept-text">Aceito os termos de uso e concordo com as
+                    <a href="#" class="accept-link">políticas de privacidade</a>
+                </span>
+            </div>
+
+            <button type="button" class="register">Cadastrar</button>
+        </form>
+    </section>
+</body>
+<script src="index.js"></script>
+
+</html>
