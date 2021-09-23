@@ -16,8 +16,6 @@ function nameLength (input, min, max){
     if (inputText.length > min && inputText.length < max) {
         return true;
     } else {
-        alert(`O nome deve conter no mínimo ${min} caracteres e no máximo 
-        ${max} caracteres.`)
         return false;
     }
 }
@@ -28,7 +26,6 @@ function checkEmail(input) {
     if (emailText.includes("@")){
         return true;
     } else {
-        alert("Insira um E-mail válido")
         return false;
     }
 
@@ -41,28 +38,27 @@ function checkPassword(input1, input2){
     if ((password === passwordConfirm) && password != '') {
         return true;
     } else {
-        alert("As senhas devem ser iguais")
         return false;
     }
 }
 
 function hidePassword1(){
-    let x = document.getElementById("password1");
+    const $password1 = document.getElementById("password1");
     
-    if (x.type === 'password'){
-        x.type = "text";
+    if ($password1.type === 'password'){
+        $password1.type = "text";
     } else {
-        x.type = "password";
+        $password1.type = "password";
     }
 }
 
 function hidePassword2(){
-    let y = document.getElementById("password2");
+    const $password2 = document.getElementById("password2");
 
-    if (y.type === 'password'){
-        y.type = "text";
+    if ($password2.type === 'password'){
+        $password2.type = "text";
     } else {
-        y.type = "password";
+        $password2.type = "password";
     }
 }
 
@@ -86,10 +82,15 @@ $passwordButton2.addEventListener('click', function(){
 })
 
 $registerButton.addEventListener('click', function(){
-    if (nameLength($name, 3, 30) && checkEmail($email) &&
-     checkPassword($password1, $password2) == true) {
+    const nameOk = nameLength($name, 3, 30);
+    const emailOk = checkEmail($email);
+    const passwordOk = checkPassword($password1, $password2);
+
+    if (nameOk && emailOk && passwordOk) {
         $website.innerHTML = "<h1 class='register-title'>Cadastro feito com sucesso!</h1>"
     } else {
+        alert('O nome deve conter no mínimo 3 caracteres e no máximo ' + 
+        '30 caracteres, o e-mail deve ser válido, e as senhas devem ser iguais!')
         return
     }
 })

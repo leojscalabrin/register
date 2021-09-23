@@ -116,9 +116,7 @@
 }
 
 .register:hover{
-    animation-name: buttonColor;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
+    animation: buttonColor 300ms ease-in;
 }
 
 @keyframes buttonColor {
